@@ -1,7 +1,12 @@
 var roman = function(number) {
   var numerals = [];
   if (number === 0) {
-    alert("Enter higher number");
+    alert("The Romans had no concept of zero. Try again.");
+    return numerals;
+  }
+  if (number > 3999) {
+    alert("The Romans couldn't count that high. Try again.");
+    return numerals;
   }
   while (number >= 1000) {
     numerals.push("M");
@@ -65,3 +70,17 @@ var roman = function(number) {
   var numerals = numerals.join("");
   return numerals;
 };
+
+
+
+
+$(function() {
+  $("form#numbers").submit(function(event) {
+    var numbers = parseInt($("input#firstNumber").val())
+    var result = roman(numbers);
+
+    $('body').toggleClass('toggle');
+    $("#romanize").text(result);
+    event.preventDefault();
+  });
+});

@@ -1,0 +1,12 @@
+body {
+  background-image: none;
+  text-align: center;
+}
+
+body.toggle {
+  background-image: url('./img/joaquin.gif')
+}
+
+#romanize {
+  color: white;
+}
