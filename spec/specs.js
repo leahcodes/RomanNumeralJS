@@ -22,4 +22,7 @@ describe("roman", function() {
   it("Pushes L into array for number greater than  or eq 50", function() {
     expect(roman(50)).to.eql(["L"]);
   });
+
+  it("Pushes X into array for number greater than  or eq 50", function() {
+    expect(roman(10)).to.eql(["X"]);
 });
