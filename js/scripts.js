@@ -19,5 +19,15 @@ var roman = function(number) {
     numerals.push("C");
     number -= 100;
   };
+
+  while (number >= 90) {
+    numerals.push("X");
+    number -= 90;
+  };
+
+  while (number >= 50) {
+    numerals.push("L");
+    number -= 50;
+  };
   return numerals;
 };
